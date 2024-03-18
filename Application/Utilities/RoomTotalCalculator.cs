@@ -7,12 +7,12 @@ namespace Application.Utilities
     {
         public decimal CalculateRoomTotal(RoomsByHotelDTO room, decimal hotelCommission, int days)
         {
-            decimal totalHabitacion = (room.RoomsBaseCost + room.RoomsTaxes + (room.RoomsBaseCost * hotelCommission / 100))*days;
+            decimal totalHabitacion = (room.RoomsBaseCost + room.RoomsTaxes + hotelCommission) * days;
             return totalHabitacion;
         }
         public decimal CalculateRoomTotal(Room room, decimal hotelCommission, int days)
         {
-            decimal totalRoom = (room.BaseCost + room.Taxes + (room.BaseCost * hotelCommission / 100)) * days;
+            decimal totalRoom = (room.BaseCost + room.Taxes + hotelCommission) * days;
             return totalRoom;
         }
 
