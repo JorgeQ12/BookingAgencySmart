@@ -26,7 +26,7 @@ namespace Application.Utilities
                 var personalizedPlainTextContent = string.Format(plainTextContent, guest.FirstName + " " + guest.LastName);
                 var personalizedHtmlContent = string.Format(htmlContent, guest.FirstName + " " + guest.LastName);
                 var msg = MailHelper.CreateSingleEmail(from, to, subject, personalizedPlainTextContent, personalizedHtmlContent);
-                var response = await client.SendEmailAsync(msg);
+                //var response = await client.SendEmailAsync(msg);
             }
         }
     }
